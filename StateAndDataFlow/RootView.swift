@@ -13,9 +13,9 @@ struct RootView: View {
     var body: some View {
         Group {
             if userManager.isLoggedIn {
-                ContentView()
+                ContentView(userManager: userManager)
             } else {
-                LoginView()
+                LoginView(userManager: userManager)
             }
         }
         .environmentObject(userManager)

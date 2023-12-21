@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var timer = TimeCounter()
-    @EnvironmentObject private var userManager: UserManager
+    @ObservedObject var userManager: UserManager
     
     var body: some View {
         VStack {
@@ -19,23 +19,24 @@ struct ContentView: View {
             Text(timer.counter.formatted())
                 .font(.largeTitle)
                 .padding(.top, 100)
-            
             Spacer()
-            
             ButtonView(timer: timer)
-            
+            Spacer()
+            LogoutButtonView()
             Spacer()
         }
+        .environmentObject(userManager)
     }
 }
 
 #Preview {
-    ContentView()
-        .environmentObject(UserManager())
+    ContentView(userManager: UserManager())
 }
 
 struct ButtonView: View {
+        
     @ObservedObject var timer: TimeCounter
+    
     
     var body: some View {
         Button(action: timer.startTimer) {
@@ -46,6 +47,31 @@ struct ButtonView: View {
         }
         .frame(width: 200, height: 60)
         .background(.red)
+        .clipShape(.rect(cornerRadius: 20))
+        .overlay(
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(.black, lineWidth: 4)
+        )
+    }
+}
+
+
+
+struct LogoutButtonView: View {
+    @EnvironmentObject var userManager: UserManager
+    
+    var body: some View {
+        Button(action: {
+            userManager.name = ""
+            userManager.isLoggedIn = false
+        }){
+            Text("Log Out")
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundStyle(.white)
+        }
+        .frame(width: 200, height: 60)
+        .background(.blue)
         .clipShape(.rect(cornerRadius: 20))
         .overlay(
             RoundedRectangle(cornerRadius: 20)

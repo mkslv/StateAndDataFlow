@@ -5,9 +5,11 @@
 //  Created by Alexey Efimov on 18.10.2023.
 //
 
-import Foundation
+import SwiftUI
 
 final class UserManager: ObservableObject {
-    @Published var isLoggedIn = false
-    var name = ""
+    @AppStorage("isLoggedIn") var isLoggedIn = false
+    @AppStorage("name") var name = ""
+    
+    // нужно ли здесь было реализовывать метод разлогина?
 }

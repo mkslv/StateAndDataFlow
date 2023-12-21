@@ -60,9 +60,9 @@
 			isa = PBXGroup;
 			children = (
 				A87E266E2AE0106F006262D5 /* StateAndDataFlowApp.swift */,
+				A870D5682AE05CEF000D10A8 /* RootView.swift */,
 				A87E26702AE0106F006262D5 /* ContentView.swift */,
 				A870D5642AE05AE8000D10A8 /* LoginView.swift */,
-				A870D5682AE05CEF000D10A8 /* RootView.swift */,
 				A870D5622AE0555B000D10A8 /* TimeCounter.swift */,
 				A870D5662AE05BB1000D10A8 /* UserManager.swift */,
 				A87E26722AE01070006262D5 /* Assets.xcassets */,
@@ -288,7 +288,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"StateAndDataFlow/Preview Content\"";
-				DEVELOPMENT_TEAM = GBTTU32HS2;
+				DEVELOPMENT_TEAM = 4M232ZC8EQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -301,7 +301,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ru.swiftbook.StateAndDataFlow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxkiselyov.StateAndDataFlow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -320,7 +320,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"StateAndDataFlow/Preview Content\"";
-				DEVELOPMENT_TEAM = GBTTU32HS2;
+				DEVELOPMENT_TEAM = 4M232ZC8EQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -333,7 +333,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ru.swiftbook.StateAndDataFlow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxkiselyov.StateAndDataFlow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
