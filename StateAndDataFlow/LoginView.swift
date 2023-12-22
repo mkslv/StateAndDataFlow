@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @ObservedObject var userManager: UserManager
-//    @State private var name = ""
+    @ObservedObject var userManager: userDefaults
     
     var body: some View {
         VStack {
@@ -38,5 +37,5 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView(userManager: UserManager())
+    LoginView(userManager: userDefaults())
 }

@@ -10,6 +10,10 @@ import SwiftUI
 final class userDefaults: ObservableObject {
     @AppStorage("isLoggedIn") var isLoggedIn = false
     @AppStorage("name") var name = ""
+    var buttonTitle = "LogOut"
     
-    // нужно ли здесь было реализовывать метод разлогина?
+    func deleteUser() {
+        isLoggedIn = false
+        name = ""
+    }
 }

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A870D5632AE0555B000D10A8 /* TimeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A870D5622AE0555B000D10A8 /* TimeCounter.swift */; };
 		A870D5652AE05AE8000D10A8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A870D5642AE05AE8000D10A8 /* LoginView.swift */; };
-		A870D5672AE05BB1000D10A8 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A870D5662AE05BB1000D10A8 /* UserManager.swift */; };
+		A870D5672AE05BB1000D10A8 /* userDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A870D5662AE05BB1000D10A8 /* userDefaults.swift */; };
 		A870D5692AE05CEF000D10A8 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A870D5682AE05CEF000D10A8 /* RootView.swift */; };
 		A87E266F2AE0106F006262D5 /* StateAndDataFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87E266E2AE0106F006262D5 /* StateAndDataFlowApp.swift */; };
 		A87E26712AE0106F006262D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87E26702AE0106F006262D5 /* ContentView.swift */; };
@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		A870D5622AE0555B000D10A8 /* TimeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCounter.swift; sourceTree = "<group>"; };
 		A870D5642AE05AE8000D10A8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		A870D5662AE05BB1000D10A8 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		A870D5662AE05BB1000D10A8 /* userDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDefaults.swift; sourceTree = "<group>"; };
 		A870D5682AE05CEF000D10A8 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		A87E266B2AE0106F006262D5 /* StateAndDataFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateAndDataFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A87E266E2AE0106F006262D5 /* StateAndDataFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateAndDataFlowApp.swift; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 				A87E26702AE0106F006262D5 /* ContentView.swift */,
 				A870D5642AE05AE8000D10A8 /* LoginView.swift */,
 				A870D5622AE0555B000D10A8 /* TimeCounter.swift */,
-				A870D5662AE05BB1000D10A8 /* UserManager.swift */,
+				A870D5662AE05BB1000D10A8 /* userDefaults.swift */,
 				A87E26722AE01070006262D5 /* Assets.xcassets */,
 				A87E26742AE01070006262D5 /* Preview Content */,
 			);
@@ -153,7 +153,7 @@
 				A87E26712AE0106F006262D5 /* ContentView.swift in Sources */,
 				A870D5692AE05CEF000D10A8 /* RootView.swift in Sources */,
 				A870D5652AE05AE8000D10A8 /* LoginView.swift in Sources */,
-				A870D5672AE05BB1000D10A8 /* UserManager.swift in Sources */,
+				A870D5672AE05BB1000D10A8 /* userDefaults.swift in Sources */,
 				A87E266F2AE0106F006262D5 /* StateAndDataFlowApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var timer = TimeCounter()
-    @ObservedObject var userManager: UserManager
+    @ObservedObject var userManager: userDefaults
     
     var body: some View {
         VStack {
@@ -20,9 +20,9 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .padding(.top, 100)
             Spacer()
-            ButtonView(timer: timer)
+            ButtonView(title: timer.buttonTitle,completion: timer.startTimer, color: .red)
             Spacer()
-            LogoutButtonView()
+            ButtonView(title: userManager.buttonTitle,completion: userManager.deleteUser, color: .blue)
             Spacer()
         }
         .environmentObject(userManager)
@@ -30,23 +30,23 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(userManager: UserManager())
+    ContentView(userManager: userDefaults())
 }
 
 struct ButtonView: View {
-        
-    @ObservedObject var timer: TimeCounter
-    
+    let title: String
+    let completion: () -> Void
+    let color: Color
     
     var body: some View {
-        Button(action: timer.startTimer) {
-            Text(timer.buttonTitle)
+        Button(action: completion) {
+            Text(title)
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundStyle(.white)
         }
         .frame(width: 200, height: 60)
-        .background(.red)
+        .background(color)
         .clipShape(.rect(cornerRadius: 20))
         .overlay(
             RoundedRectangle(cornerRadius: 20)
@@ -56,26 +56,3 @@ struct ButtonView: View {
 }
 
 
-
-struct LogoutButtonView: View {
-    @EnvironmentObject var userManager: UserManager
-    
-    var body: some View {
-        Button(action: {
-            userManager.name = ""
-            userManager.isLoggedIn = false
-        }){
-            Text("Log Out")
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundStyle(.white)
-        }
-        .frame(width: 200, height: 60)
-        .background(.blue)
-        .clipShape(.rect(cornerRadius: 20))
-        .overlay(
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(.black, lineWidth: 4)
-        )
-    }
-}
